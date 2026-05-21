@@ -26,8 +26,8 @@ export default function MentionsLegales() {
             content: [
               'Site web : fisca.fr',
               'Statut : Personne physique',
-              'Responsable de publication : [Votre Nom]',
-              'Adresse : [Votre adresse]',
+              'Responsable de publication : Mogo',
+              'Adresse : Paris, France',
               'Email : contact@fisca.fr',
             ]
           },
@@ -68,7 +68,7 @@ export default function MentionsLegales() {
             title: '6. Droit applicable',
             content: [
               "Les présentes mentions légales sont soumises au droit français.",
-              "En cas de litige, les tribunaux français seront seuls compétents.",
+              "En cas de litige, les tribunaux compétents de Paris seront seuls compétents.",
             ]
           },
         ].map(({ title, content }) => (

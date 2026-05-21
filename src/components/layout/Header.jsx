@@ -17,7 +17,7 @@ export default function Header() {
       <header style={{ background: '#0B1F3A', position: 'sticky', top: 0, zIndex: 50 }}>
         <div className="max-w-6xl mx-auto px-4 lg:px-6 flex items-center justify-between" style={{ height: '60px' }}>
           {/* Brand */}
-          <div className="flex items-center gap-2.5">
+          <NavLink to="/" className="flex items-center gap-2.5" style={{ textDecoration: 'none' }}>
             <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: '#1E5FCC' }}>
               <TrendingUp size={14} color="white" />
             </div>
@@ -28,7 +28,7 @@ export default function Header() {
               style={{ background: 'rgba(96,165,250,0.15)', color: '#93C5FD', border: '1px solid rgba(96,165,250,0.25)' }}>
               2026
             </span>
-          </div>
+          </NavLink>
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {tools.map(({ to, label }) => (

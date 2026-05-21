@@ -80,7 +80,7 @@ export default function CGU() {
             title: '8. Droit applicable & juridiction',
             content: [
               "Les présentes CGU sont soumises au droit français.",
-              "Tout litige sera soumis aux tribunaux compétents du ressort de [Votre ville].",
+              "Tout litige sera soumis aux tribunaux compétents de Paris.",
             ]
           },
         ].map(({ title, content }) => (

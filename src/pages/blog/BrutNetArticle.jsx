@@ -1,12 +1,12 @@
 import BlogLayout from '../../components/blog/BlogLayout'
-import BrutNetCalculator from '../BrutNetPage'
+import BrutNetPage from '../BrutNetPage'
 import ArticleContent from '../../content/articles/calculateur-brut-net-2026.mdx'
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Calculateur salaire brut net 2026 — France",
-  "description": "Guide complet pour calculer votre salaire net en France en 2026. Cotisations URSSAF, AGIRC-ARRCO, prélèvement à la source.",
+  "description": "Guide complet pour calculer votre salaire net en France en 2026.",
   "dateModified": "2026-01-01",
   "publisher": {
     "@type": "Organization",
@@ -25,6 +25,7 @@ export default function BrutNetArticle() {
       readTime="5 min"
       tag="Salaire & Fiscalité"
       schema={schema}
+      ToolComponent={BrutNetPage}
     >
       <ArticleContent />
     </BlogLayout>

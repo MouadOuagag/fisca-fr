@@ -24,7 +24,8 @@ export default function Confidentialite() {
           {
             title: '1. Responsable du traitement',
             content: [
-              'Fisca.fr — [Votre Nom]',
+              'Fisca.fr — Mogo',
+              'Localisation : Paris, France',
               'Contact DPO : contact@fisca.fr',
             ]
           },
