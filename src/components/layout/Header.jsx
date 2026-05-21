@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 
 const tools = [
-  { to: '/',                  label: 'Brut → Net' },
-  { to: '/auto-entrepreneur', label: 'Auto-Entrepreneur', soon: true },
-  { to: '/frais-notaire',     label: 'Frais de Notaire',  soon: true },
-  { to: '/teletravail',       label: 'Télétravail',       soon: true },
-  { to: '/credit',            label: 'Crédit Immo',       soon: true },
+  { to: '/brut-net',          label: 'Brut → Net' },
+  { to: '/auto-entrepreneur', label: 'Auto-Entrepreneur' },
+  { to: '/frais-notaire',     label: 'Frais de Notaire' },
+  { to: '/teletravail',       label: 'Télétravail' },
+  { to: '/credit',            label: 'Crédit Immo' },
 ]
 
 export default function Header() {
@@ -31,13 +31,12 @@ export default function Header() {
           </div>
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-1">
-            {tools.map(({ to, label, soon }) => (
+            {tools.map(({ to, label }) => (
               <NavLink key={to} to={to} end
                 className={({ isActive }) =>
                   `px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${isActive ? 'text-white' : 'text-slate-400 hover:text-white hover:bg-white/10'}`}
                 style={({ isActive }) => isActive ? { background: 'rgba(255,255,255,0.12)' } : {}}>
                 {label}
-                {soon && <span className="ml-1.5 text-xs px-1.5 py-0.5 rounded-full" style={{ background: 'rgba(255,255,255,0.1)', color: '#94A3B8' }}>bientôt</span>}
               </NavLink>
             ))}
           </nav>
@@ -50,13 +49,13 @@ export default function Header() {
         {mobileOpen && (
           <div style={{ background: '#0F2847', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
             <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-1">
-              {tools.map(({ to, label, soon }) => (
+              {tools.map(({ to, label }) => (
                 <NavLink key={to} to={to} end
                   onClick={() => setMobileOpen(false)}
                   className={({ isActive }) =>
                     `px-3 py-2.5 rounded-xl text-sm font-medium ${isActive ? 'text-white' : 'text-slate-300'}`}
                   style={({ isActive }) => isActive ? { background: 'rgba(30,95,204,0.4)' } : {}}>
-                  {label} {soon && '· Bientôt'}
+                  {label}
                 </NavLink>
               ))}
             </div>

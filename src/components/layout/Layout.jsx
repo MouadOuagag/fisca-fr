@@ -1,15 +1,16 @@
 import Header from './Header'
+import Footer from './Footer'
 import { AdZoneBanner } from '../ui/AdZone'
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen" style={{ background: '#F4F6FA' }}>
+    <div className="min-h-screen flex flex-col" style={{ background: '#F4F6FA' }}>
       <Header />
-      <div className="max-w-5xl mx-auto px-4 lg:px-6 py-6">
-        {/* AdSense Banner Zone — Top of content */}
+      <div className="flex-1 w-full max-w-5xl mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6">
         <AdZoneBanner />
         {children}
       </div>
+      <Footer />
     </div>
   )
 }
