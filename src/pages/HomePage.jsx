@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Calculator, Briefcase, Building2, Wifi, Home, ArrowRight, TrendingUp, Users, Star } from 'lucide-react'
+import SEOHead from '../components/seo/SEOHead'
 
 const CARD_SHADOW = '0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)'
 
@@ -62,6 +63,24 @@ export default function HomePage() {
   const navigate = useNavigate()
   return (
     <div>
+      <SEOHead
+        title="Simulateurs Fiscaux Gratuits 2026"
+        description="5 simulateurs fiscaux gratuits pour la France : calculateur brut net, auto-entrepreneur, frais de notaire, télétravail et crédit immobilier. Taux 2026 officiels."
+        canonical="/"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Fisca.fr",
+          "url": "https://fisca.fr",
+          "description": "Référence fiscale française 2026 — 5 simulateurs gratuits",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://fisca.fr/brut-net",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
+
       {/* Hero */}
       <div className="rounded-2xl p-6 sm:p-8 mb-6"
         style={{ background: 'linear-gradient(135deg, #0B1F3A 0%, #1E3A5F 100%)', boxShadow: CARD_SHADOW }}>

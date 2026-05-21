@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fisca.fr/sitemap.xml
+
+# Bloquer les fichiers inutiles pour les crawlers
+Disallow: /assets/
+Disallow: /*.js$
+Disallow: /*.css$
