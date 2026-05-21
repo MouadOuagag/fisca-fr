@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import HomePage from './pages/HomePage'
-import BrutNetPage from './pages/BrutNetPage'
+import BrutNetArticle from './pages/blog/BrutNetArticle'
 import AutoEntrepreneurPage from './pages/AutoEntrepreneurPage'
 import FraisNotairePage from './pages/FraisNotairePage'
 import TeletravailPage from './pages/TeletravailPage'
@@ -16,7 +16,7 @@ export default function App() {
       <Layout>
         <Routes>
           <Route path="/"                           element={<HomePage />} />
-          <Route path="/brut-net"                   element={<BrutNetPage />} />
+          <Route path="/brut-net"                   element={<BrutNetArticle />} />
           <Route path="/auto-entrepreneur"          element={<AutoEntrepreneurPage />} />
           <Route path="/frais-notaire"              element={<FraisNotairePage />} />
           <Route path="/teletravail"                element={<TeletravailPage />} />
