@@ -3,7 +3,7 @@ import Layout from './components/layout/Layout'
 import HomePage from './pages/HomePage'
 import BrutNetArticle from './pages/blog/BrutNetArticle'
 import AutoEntrepreneurPage from './pages/AutoEntrepreneurPage'
-import FraisNotairePage from './pages/FraisNotairePage'
+import FraisNotaireArticle from './pages/blog/FraisNotaireArticle'
 import TeletravailPage from './pages/TeletravailPage'
 import CreditPage from './pages/CreditPage'
 import MentionsLegales from './pages/legal/MentionsLegales'
@@ -18,7 +18,7 @@ export default function App() {
           <Route path="/"                           element={<HomePage />} />
           <Route path="/brut-net"                   element={<BrutNetArticle />} />
           <Route path="/auto-entrepreneur"          element={<AutoEntrepreneurPage />} />
-          <Route path="/frais-notaire"              element={<FraisNotairePage />} />
+          <Route path="/frais-notaire"              element={<FraisNotaireArticle />} />
           <Route path="/teletravail"                element={<TeletravailPage />} />
           <Route path="/credit"                     element={<CreditPage />} />
           <Route path="/mentions-legales"           element={<MentionsLegales />} />
