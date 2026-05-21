@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer style={{ background: '#0B1F3A', marginTop: '3rem' }}>
       <div className="max-w-5xl mx-auto px-4 lg:px-6 py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 mb-8">
 
           {/* Brand */}
           <div>
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Légal */}
+          {/* Légal info */}
           <div>
             <p className="text-xs font-bold uppercase tracking-widest mb-3"
               style={{ color: 'rgba(255,255,255,0.3)' }}>Informations légales</p>
@@ -61,6 +61,27 @@ export default function Footer() {
                 'Mis à jour : Janvier 2026',
               ].map(t => (
                 <p key={t} className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{t}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Légal links */}
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest mb-3"
+              style={{ color: 'rgba(255,255,255,0.3)' }}>Légal</p>
+            <div className="space-y-2">
+              {[
+                { to: '/mentions-legales',          label: 'Mentions Légales' },
+                { to: '/politique-confidentialite', label: 'Confidentialité' },
+                { to: '/cgu',                       label: 'CGU' },
+              ].map(({ to, label }) => (
+                <NavLink key={to} to={to}
+                  className="block text-xs transition-colors"
+                  style={{ color: 'rgba(255,255,255,0.5)' }}
+                  onMouseEnter={e => e.target.style.color = 'white'}
+                  onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.5)'}>
+                  {label}
+                </NavLink>
               ))}
             </div>
           </div>
