@@ -6,6 +6,7 @@ import AutoEntrepreneurArticle from './pages/blog/AutoEntrepreneurArticle'
 import FraisNotaireArticle from './pages/blog/FraisNotaireArticle'
 import TeletravailArticle from './pages/blog/TeletravailArticle'
 import CreditArticle from './pages/blog/CreditArticle'
+import BlogIndex from './pages/blog/BlogIndex'
 import MentionsLegales from './pages/legal/MentionsLegales'
 import Confidentialite from './pages/legal/Confidentialite'
 import CGU from './pages/legal/CGU'
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/frais-notaire"              element={<FraisNotaireArticle />} />
           <Route path="/teletravail"                element={<TeletravailArticle />} />
           <Route path="/credit"                     element={<CreditArticle />} />
+          <Route path="/blog"                        element={<BlogIndex />} />
           <Route path="/mentions-legales"           element={<MentionsLegales />} />
           <Route path="/politique-confidentialite"  element={<Confidentialite />} />
           <Route path="/cgu"                        element={<CGU />} />

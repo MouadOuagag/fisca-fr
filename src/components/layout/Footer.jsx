@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer style={{ background: '#0B1F3A', marginTop: '3rem' }}>
       <div className="max-w-5xl mx-auto px-4 lg:px-6 py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-5 gap-8 mb-8">
 
           {/* Brand */}
           <div>
@@ -62,6 +62,28 @@ export default function Footer() {
               ].map(t => (
                 <p key={t} className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{t}</p>
               ))}
+            </div>
+          </div>
+
+          {/* Contenu / Blog */}
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest mb-3"
+              style={{ color: 'rgba(255,255,255,0.3)' }}>Contenu</p>
+            <div className="space-y-2">
+              <NavLink to="/blog"
+                className="block text-xs transition-colors"
+                style={{ color: 'rgba(255,255,255,0.5)' }}
+                onMouseEnter={e => e.target.style.color = 'white'}
+                onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.5)'}>
+                Blog & Guides fiscaux
+              </NavLink>
+              <NavLink to="/blog"
+                className="block text-xs transition-colors"
+                style={{ color: 'rgba(255,255,255,0.5)' }}
+                onMouseEnter={e => e.target.style.color = 'white'}
+                onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.5)'}>
+                Tous les simulateurs
+              </NavLink>
             </div>
           </div>
 
