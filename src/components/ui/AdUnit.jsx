@@ -8,7 +8,7 @@ const AD_SLOT = {
   incontent: 'ZZZZZZZZ',
 }
 
-const AD_CLIENT = 'ca-pub-XXXXXXXXXXXXXXXX' // ← remplacer par ton Publisher ID
+const AD_CLIENT = 'ca-pub-4481691092962906'
 
 function AdPlaceholder({ label, size }) {
   return (
