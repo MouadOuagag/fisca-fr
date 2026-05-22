@@ -1,6 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import { AdZoneBanner } from '../ui/AdZone'
+import CookieBanner from '../ui/CookieBanner'
 
 export default function Layout({ children }) {
   return (
@@ -11,6 +12,7 @@ export default function Layout({ children }) {
         {children}
       </div>
       <Footer />
+      <CookieBanner />
     </div>
   )
 }
