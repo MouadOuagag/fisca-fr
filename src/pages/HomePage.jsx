@@ -110,6 +110,18 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        <div className="mt-5 flex gap-3 flex-wrap">
+          <button onClick={() => navigate('/commencer')}
+            className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white transition-all hover:opacity-90"
+            style={{ background: '#1E5FCC' }}>
+            Trouver mon outil →
+          </button>
+          <button onClick={() => navigate('/brut-net')}
+            className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold transition-all hover:opacity-80"
+            style={{ background: 'rgba(255,255,255,0.1)', color: 'white' }}>
+            Calculateur Brut → Net
+          </button>
+        </div>
       </div>
 
       {/* Tools grid */}
