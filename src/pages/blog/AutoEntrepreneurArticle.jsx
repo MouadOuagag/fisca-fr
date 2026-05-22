@@ -8,7 +8,7 @@ const schema = {
   "headline": "Simulateur auto-entrepreneur 2026 — cotisations, IR et TVA",
   "description": "Guide complet sur les cotisations URSSAF, seuils TVA et impôt sur le revenu pour les micro-entrepreneurs en France en 2026.",
   "dateModified": "2026-01-01",
-  "publisher": { "@type": "Organization", "name": "Fisca.fr", "url": "https://fisca.fr" }
+  "publisher": { "@type": "Organization", "name": "MonBilanFacile.fr", "url": "https://monbilanfacile.fr" }
 }
 
 export default function AutoEntrepreneurArticle() {

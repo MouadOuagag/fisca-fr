@@ -8,7 +8,7 @@ const schema = {
   "headline": "Indemnités télétravail 2026 — forfait URSSAF et frais réels",
   "description": "Calculez vos indemnités télétravail exonérées selon le forfait URSSAF 2026 ou la méthode des frais réels. Guide complet pour salariés français.",
   "dateModified": "2026-01-01",
-  "publisher": { "@type": "Organization", "name": "Fisca.fr", "url": "https://fisca.fr" }
+  "publisher": { "@type": "Organization", "name": "MonBilanFacile.fr", "url": "https://monbilanfacile.fr" }
 }
 
 export default function TeletravailArticle() {

@@ -10,8 +10,8 @@ const schema = {
   "dateModified": "2026-01-01",
   "publisher": {
     "@type": "Organization",
-    "name": "Fisca.fr",
-    "url": "https://fisca.fr"
+    "name": "MonBilanFacile.fr",
+    "url": "https://monbilanfacile.fr"
   },
   "@graph": [
     {

@@ -13,7 +13,7 @@ export default function CGU() {
           Conditions Générales d'Utilisation (CGU)
         </h1>
         <p className="text-sm mt-1" style={{ color: '#64748B' }}>
-          En utilisant Fisca.fr, vous acceptez les présentes conditions.
+          En utilisant MonBilanFacile.fr, vous acceptez les présentes conditions.
         </p>
       </div>
 
@@ -24,14 +24,14 @@ export default function CGU() {
           {
             title: '1. Objet',
             content: [
-              "Les présentes CGU régissent l'utilisation du site fisca.fr et de ses outils de simulation fiscale.",
-              "Fisca.fr est un service d'information fiscale gratuit destiné aux résidents français.",
+              "Les présentes CGU régissent l'utilisation du site monbilanfacile.fr et de ses outils de simulation fiscale.",
+              "MonBilanFacile.fr est un service d'information fiscale gratuit destiné aux résidents français.",
             ]
           },
           {
             title: '2. Accès au service',
             content: [
-              "L'accès à Fisca.fr est gratuit et ne nécessite aucune inscription.",
+              "L'accès à MonBilanFacile.fr est gratuit et ne nécessite aucune inscription.",
               "L'éditeur se réserve le droit de modifier, suspendre ou interrompre le service à tout moment.",
               "Une connexion internet est requise. L'éditeur n'est pas responsable des problèmes de connectivité.",
             ]
@@ -39,7 +39,7 @@ export default function CGU() {
           {
             title: '3. Nature du service — Avertissement important',
             content: [
-              "⚠ Les simulateurs de Fisca.fr sont des outils pédagogiques et indicatifs uniquement.",
+              "⚠ Les simulateurs de MonBilanFacile.fr sont des outils pédagogiques et indicatifs uniquement.",
               "Ils ne constituent pas un conseil fiscal, juridique, comptable ou financier.",
               "Les résultats sont des estimations basées sur des paramètres généraux et peuvent différer de votre situation réelle.",
               "Pour toute décision fiscale, immobilière ou financière importante, consultez un professionnel qualifié (expert-comptable, notaire, conseiller financier).",
@@ -56,7 +56,7 @@ export default function CGU() {
           {
             title: '5. Publicité',
             content: [
-              "Fisca.fr affiche des publicités via Google AdSense pour financer le service gratuit.",
+              "MonBilanFacile.fr affiche des publicités via Google AdSense pour financer le service gratuit.",
               "L'éditeur n'est pas responsable du contenu des publicités affichées.",
               "Les publicités sont clairement identifiées comme telles.",
             ]
@@ -64,7 +64,7 @@ export default function CGU() {
           {
             title: '6. Liens hypertextes',
             content: [
-              "Fisca.fr peut contenir des liens vers des sites tiers (URSSAF, impots.gouv.fr, legifrance.gouv.fr).",
+              "MonBilanFacile.fr peut contenir des liens vers des sites tiers (URSSAF, impots.gouv.fr, legifrance.gouv.fr).",
               "L'éditeur n'est pas responsable du contenu de ces sites externes.",
             ]
           },

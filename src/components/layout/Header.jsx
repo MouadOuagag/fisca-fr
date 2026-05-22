@@ -22,7 +22,7 @@ export default function Header() {
               <TrendingUp size={14} color="white" />
             </div>
             <span className="font-bold text-base text-white tracking-tight">
-              Fisca<span style={{ color: '#60A5FA' }}>.fr</span>
+              MonBilan<span style={{ color: '#60A5FA' }}>.fr</span>
             </span>
             <span className="hidden sm:inline text-xs font-semibold px-2 py-0.5 rounded-full ml-1"
               style={{ background: 'rgba(96,165,250,0.15)', color: '#93C5FD', border: '1px solid rgba(96,165,250,0.25)' }}>

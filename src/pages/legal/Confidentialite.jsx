@@ -24,15 +24,15 @@ export default function Confidentialite() {
           {
             title: '1. Responsable du traitement',
             content: [
-              'Fisca.fr — Mogo',
+              'MonBilanFacile.fr — Mogo',
               'Localisation : Paris, France',
-              'Contact DPO : contact@fisca.fr',
+              'Contact DPO : contact@monbilanfacile.fr',
             ]
           },
           {
             title: '2. Données collectées',
             content: [
-              "Fisca.fr adopte une approche Privacy by Design.",
+              "MonBilanFacile.fr adopte une approche Privacy by Design.",
               "Données saisies dans les calculateurs : traitées uniquement côté client (votre navigateur), jamais transmises à nos serveurs.",
               "Données de navigation anonymes : collectées via Google Analytics 4 (GA4) — adresse IP anonymisée, pages visitées, durée de session.",
               "Cookies publicitaires : Google AdSense peut déposer des cookies pour la personnalisation des annonces.",
@@ -52,7 +52,7 @@ export default function Confidentialite() {
               "Droit de rectification : correction de données inexactes.",
               "Droit à l'effacement (droit à l'oubli) : suppression de vos données.",
               "Droit d'opposition : vous pouvez vous opposer au traitement à des fins de marketing.",
-              "Pour exercer ces droits : contact@fisca.fr — Réponse sous 30 jours.",
+              "Pour exercer ces droits : contact@monbilanfacile.fr — Réponse sous 30 jours.",
             ]
           },
           {
@@ -81,7 +81,7 @@ export default function Confidentialite() {
           {
             title: '8. Contact & réclamation',
             content: [
-              "Email : contact@fisca.fr",
+              "Email : contact@monbilanfacile.fr",
               "Autorité de contrôle française : CNIL — www.cnil.fr — 3 Place de Fontenoy, 75007 Paris.",
             ]
           },

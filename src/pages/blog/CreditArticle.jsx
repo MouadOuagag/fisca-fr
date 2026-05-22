@@ -8,7 +8,7 @@ const schema = {
   "headline": "Simulateur crédit immobilier 2026 — mensualités et coût total",
   "description": "Calculez vos mensualités, le coût total de votre crédit immobilier et votre taux d'endettement HCSF selon les taux du marché français 2026.",
   "dateModified": "2026-01-01",
-  "publisher": { "@type": "Organization", "name": "Fisca.fr", "url": "https://fisca.fr" }
+  "publisher": { "@type": "Organization", "name": "MonBilanFacile.fr", "url": "https://monbilanfacile.fr" }
 }
 
 export default function CreditArticle() {

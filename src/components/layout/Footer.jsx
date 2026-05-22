@@ -23,7 +23,7 @@ export default function Footer() {
                 <TrendingUp size={14} color="white" />
               </div>
               <span className="font-bold text-white">
-                Fisca<span style={{ color: '#60A5FA' }}>.fr</span>
+                MonBilan<span style={{ color: '#60A5FA' }}>.fr</span>
               </span>
             </div>
             <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.4)' }}>
@@ -112,7 +112,7 @@ export default function Footer() {
         <div className="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-3"
           style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
-            © 2026 Fisca.fr — Tous droits réservés
+            © 2026 MonBilanFacile.fr — Tous droits réservés
           </p>
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
             Simulateurs fiscaux gratuits · France métropolitaine · Régime général

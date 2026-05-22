@@ -69,13 +69,13 @@ export default function BlogIndex() {
         schema={{
           "@context": "https://schema.org",
           "@type": "Blog",
-          "name": "Blog Fisca.fr",
+          "name": "Blog MonBilanFacile.fr",
           "description": "Guides fiscaux français 2026",
-          "url": "https://fisca.fr/blog",
+          "url": "https://monbilanfacile.fr/blog",
           "publisher": {
             "@type": "Organization",
-            "name": "Fisca.fr",
-            "url": "https://fisca.fr"
+            "name": "MonBilanFacile.fr",
+            "url": "https://monbilanfacile.fr"
           }
         }}
       />

@@ -24,11 +24,11 @@ export default function MentionsLegales() {
           {
             title: '1. Éditeur du site',
             content: [
-              'Site web : fisca.fr',
+              'Site web : monbilanfacile.fr',
               'Statut : Personne physique',
               'Responsable de publication : Mogo',
               'Adresse : Paris, France',
-              'Email : contact@fisca.fr',
+              'Email : contact@monbilanfacile.fr',
             ]
           },
           {
@@ -50,7 +50,7 @@ export default function MentionsLegales() {
           {
             title: '4. Limitation de responsabilité',
             content: [
-              "Les simulateurs proposés sur Fisca.fr sont fournis à titre purement indicatif et pédagogique.",
+              "Les simulateurs proposés sur MonBilanFacile.fr sont fournis à titre purement indicatif et pédagogique.",
               "Les résultats ne constituent en aucun cas un conseil fiscal, juridique ou comptable.",
               "L'éditeur ne saurait être tenu responsable de décisions prises sur la base des calculs fournis.",
               "Pour toute décision fiscale importante, consultez un expert-comptable ou un conseiller fiscal agréé.",
@@ -59,7 +59,7 @@ export default function MentionsLegales() {
           {
             title: '5. Données personnelles',
             content: [
-              "Fisca.fr ne collecte aucune donnée personnelle identifiable.",
+              "MonBilanFacile.fr ne collecte aucune donnée personnelle identifiable.",
               "Aucun compte utilisateur n'est requis. Aucune donnée saisie dans les calculateurs n'est transmise à nos serveurs.",
               "Des cookies analytiques anonymes peuvent être utilisés (Google Analytics). Voir notre Politique de Confidentialité.",
             ]

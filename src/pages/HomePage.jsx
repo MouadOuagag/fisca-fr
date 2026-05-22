@@ -70,12 +70,12 @@ export default function HomePage() {
         schema={{
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "Fisca.fr",
-          "url": "https://fisca.fr",
+          "name": "MonBilanFacile.fr",
+          "url": "https://monbilanfacile.fr",
           "description": "Référence fiscale française 2026 — 5 simulateurs gratuits",
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://fisca.fr/brut-net",
+            "target": "https://monbilanfacile.fr/brut-net",
             "query-input": "required name=search_term_string"
           }
         }}
@@ -90,7 +90,7 @@ export default function HomePage() {
             <TrendingUp size={13} color="white" />
           </div>
           <span className="text-xs font-bold uppercase tracking-widest"
-            style={{ color: '#93C5FD' }}>Fisca.fr — Référence Fiscale 2026</span>
+            style={{ color: '#93C5FD' }}>MonBilanFacile.fr — Référence Fiscale 2026</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
           Vos simulateurs fiscaux<br />
@@ -153,10 +153,10 @@ export default function HomePage() {
       {/* SEO content */}
       <section className="rounded-2xl p-6 sm:p-8" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
         <h2 className="text-xl font-bold mb-3" style={{ color: '#0F172A' }}>
-          Fisca.fr — Votre référence fiscale française gratuite en 2026
+          MonBilanFacile.fr — Votre référence fiscale française gratuite en 2026
         </h2>
         <p className="text-sm leading-relaxed mb-4" style={{ color: '#475569' }}>
-          Fisca.fr met à votre disposition 5 simulateurs fiscaux gratuits, basés sur
+          MonBilanFacile.fr met à votre disposition 5 simulateurs fiscaux gratuits, basés sur
           les textes officiels URSSAF, DGFiP et Légifrance pour l'année 2026.
           Que vous soyez salarié, auto-entrepreneur, ou futur propriétaire immobilier,
           nos outils vous donnent une estimation fiable en temps réel.
