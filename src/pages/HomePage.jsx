@@ -84,6 +84,8 @@ export default function HomePage() {
       {/* Hero */}
       <div className="rounded-2xl p-6 sm:p-8 mb-6"
         style={{ background: 'linear-gradient(135deg, #0B1F3A 0%, #1E3A5F 100%)', boxShadow: CARD_SHADOW }}>
+
+        {/* Badge */}
         <div className="flex items-center gap-2 mb-3">
           <div className="w-6 h-6 rounded-lg flex items-center justify-center"
             style={{ background: '#1E5FCC' }}>
@@ -92,25 +94,22 @@ export default function HomePage() {
           <span className="text-xs font-bold uppercase tracking-widest"
             style={{ color: '#93C5FD' }}>MonBilanFacile.fr — Référence Fiscale 2026</span>
         </div>
+
+        {/* Title */}
         <h1 className="text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
           Vos simulateurs fiscaux<br />
           <span style={{ color: '#60A5FA' }}>gratuits pour 2026</span>
         </h1>
+
+        {/* Description */}
         <p className="text-sm sm:text-base leading-relaxed mb-6"
           style={{ color: 'rgba(255,255,255,0.6)', maxWidth: '520px' }}>
           5 outils de référence basés sur les lois fiscales françaises en vigueur.
           Calculs instantanés, sans inscription, sans publicité intrusive.
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {stats.map(({ icon: Icon, value, label }) => (
-            <div key={label} className="rounded-xl px-3 py-2.5 text-center"
-              style={{ background: 'rgba(255,255,255,0.07)' }}>
-              <p className="text-lg font-bold text-white">{value}</p>
-              <p className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>{label}</p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-5 flex gap-3 flex-wrap">
+
+        {/* CTA Buttons */}
+        <div className="flex gap-3 flex-wrap mb-8">
           <button onClick={() => navigate('/commencer')}
             className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white transition-all hover:opacity-90"
             style={{ background: '#1E5FCC' }}>
@@ -118,10 +117,27 @@ export default function HomePage() {
           </button>
           <button onClick={() => navigate('/brut-net')}
             className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold transition-all hover:opacity-80"
-            style={{ background: 'rgba(255,255,255,0.1)', color: 'white' }}>
+            style={{ background: 'rgba(255,255,255,0.12)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>
             Calculateur Brut → Net
           </button>
         </div>
+
+        {/* Stats — texte simple discret en bas */}
+        <div className="flex items-center gap-6 flex-wrap pt-5 border-t"
+          style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+          {[
+            { value: '5',     label: 'Outils fiscaux' },
+            { value: '100%',  label: 'Gratuit' },
+            { value: '2026',  label: 'Mis à jour' },
+            { value: 'FR',    label: 'Droit français' },
+          ].map(({ value, label }) => (
+            <div key={label} className="flex items-center gap-2">
+              <span className="text-sm font-bold text-white">{value}</span>
+              <span className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{label}</span>
+            </div>
+          ))}
+        </div>
+
       </div>
 
       {/* Tools grid */}
