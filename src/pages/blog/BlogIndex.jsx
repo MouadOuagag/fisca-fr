@@ -55,6 +55,66 @@ const articles = [
     color: '#DC2626',
     bg: '#FFF1F2',
   },
+  {
+    to: '/articles/impot-revenu-2026',
+    title: 'Impôt sur le revenu 2026 — Barème, tranches et calcul complet',
+    description: "Barème progressif IR 2026, quotient familial, décote et réductions d'impôt. Guide complet avec exemples chiffrés.",
+    date: 'Janvier 2026',
+    readTime: '7 min',
+    tag: 'Fiscalité & IR',
+    color: '#1E5FCC',
+    bg: '#EFF6FF',
+  },
+  {
+    to: '/articles/dividendes-flat-tax-2026',
+    title: 'Dividendes & Flat Tax 2026 — PFU 30% et optimisation fiscale',
+    description: 'Tout comprendre sur la Flat Tax (PFU 30%) : calcul, option barème progressif, abattement 40% et optimisation pour gérants de société.',
+    date: 'Janvier 2026',
+    readTime: '6 min',
+    tag: 'Dividendes & Capital',
+    color: '#059669',
+    bg: '#ECFDF5',
+  },
+  {
+    to: '/articles/plus-values-immobilieres-2026',
+    title: 'Plus-values immobilières 2026 — Calcul, abattements et exonérations',
+    description: "Taux d'imposition 36,2%, abattements pour durée de détention, exonération résidence principale. Guide complet 2026.",
+    date: 'Janvier 2026',
+    readTime: '6 min',
+    tag: 'Immobilier & Fiscalité',
+    color: '#7C3AED',
+    bg: '#EEF2FF',
+  },
+  {
+    to: '/articles/cotisations-tns-2026',
+    title: 'Cotisations TNS 2026 — Artisans, commerçants et professions libérales',
+    description: 'Taux de cotisations sociales des travailleurs non-salariés 2026 : SSI, CIPAV, calcul sur revenu N-2 et optimisation.',
+    date: 'Janvier 2026',
+    readTime: '6 min',
+    tag: 'TNS & Indépendants',
+    color: '#DC2626',
+    bg: '#FFF1F2',
+  },
+  {
+    to: '/articles/prime-partage-valeur-2026',
+    title: 'Prime de Partage de la Valeur (PPV) 2026 — Montant et fiscalité',
+    description: "Plafonds d'exonération 3 000 € ou 6 000 €, conditions de versement, fiscalité et mise en place de la PPV 2026.",
+    date: 'Janvier 2026',
+    readTime: '5 min',
+    tag: 'Primes & Avantages',
+    color: '#0891B2',
+    bg: '#ECFEFF',
+  },
+  {
+    to: '/articles/indemnites-licenciement-2026',
+    title: 'Indemnités de licenciement 2026 — Calcul et droits du salarié',
+    description: "Calcul des indemnités légales (1/4 par année jusqu'à 10 ans), fiscalité, rupture conventionnelle et délais de contestation.",
+    date: 'Janvier 2026',
+    readTime: '7 min',
+    tag: 'Emploi & Droits',
+    color: '#F59E0B',
+    bg: '#FFFBEB',
+  },
 ]
 
 export default function BlogIndex() {
@@ -103,7 +163,7 @@ export default function BlogIndex() {
       <div className="flex items-center gap-6 mb-8 px-5 py-3 rounded-2xl"
         style={{ background: 'white', boxShadow: CARD_SHADOW }}>
         {[
-          { value: '5', label: 'Articles' },
+          { value: '11', label: 'Articles' },
           { value: '5', label: 'Simulateurs' },
           { value: '2026', label: 'Mis à jour' },
           { value: '100%', label: 'Gratuit' },
@@ -176,8 +236,8 @@ export default function BlogIndex() {
           Nouveaux guides en préparation
         </p>
         <p className="text-xs" style={{ color: '#94A3B8' }}>
-          Impôt sur le revenu · Dividendes & PFU · Cotisations TNS ·
-          Plus-values immobilières · Intéressement & participation
+          Intéressement & participation · ISF/IFI · Assurance-vie ·
+          Épargne salariale · Fiscalité des expatriés
         </p>
       </div>
     </div>

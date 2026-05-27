@@ -8,6 +8,7 @@ import FraisNotaireArticle from './pages/blog/FraisNotaireArticle'
 import TeletravailArticle from './pages/blog/TeletravailArticle'
 import CreditArticle from './pages/blog/CreditArticle'
 import BlogIndex from './pages/blog/BlogIndex'
+import ArticlePage from './pages/blog/ArticlePage'
 import MentionsLegales from './pages/legal/MentionsLegales'
 import Confidentialite from './pages/legal/Confidentialite'
 import CGU from './pages/legal/CGU'
@@ -23,6 +24,7 @@ function LayoutRoutes() {
         <Route path="/teletravail"               element={<TeletravailArticle />} />
         <Route path="/credit"                    element={<CreditArticle />} />
         <Route path="/blog"                      element={<BlogIndex />} />
+        <Route path="/articles/:slug"            element={<ArticlePage />} />
         <Route path="/mentions-legales"          element={<MentionsLegales />} />
         <Route path="/politique-confidentialite" element={<Confidentialite />} />
         <Route path="/cgu"                       element={<CGU />} />
