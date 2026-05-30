@@ -1,6 +1,5 @@
 import Header from './Header'
 import Footer from './Footer'
-import { AdZoneBanner } from '../ui/AdZone'
 import CookieBanner from '../ui/CookieBanner'
 
 export default function Layout({ children }) {
@@ -8,7 +7,6 @@ export default function Layout({ children }) {
     <div className="min-h-screen flex flex-col" style={{ background: '#F4F6FA' }}>
       <Header />
       <div className="flex-1 w-full max-w-5xl mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6">
-        <AdZoneBanner />
         {children}
       </div>
       <Footer />
