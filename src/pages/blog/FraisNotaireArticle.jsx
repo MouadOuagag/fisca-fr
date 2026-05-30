@@ -5,65 +5,34 @@ import ArticleContent from '../../content/articles/frais-notaire-2026.mdx'
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Frais de notaire 2026 — Barème complet et calcul",
-  "description": "Calculez vos frais de notaire 2026 pour un achat immobilier neuf ou ancien. Droits de mutation, émoluments, débours — barème officiel et simulateur gratuit.",
+  "headline": "Frais de notaire 2026 — Neuf & Ancien, barème complet",
+  "description": "Guide complet sur les frais d'acquisition immobilière 2026 : droits de mutation, émoluments notaire, garanties.",
   "dateModified": "2026-01-01",
-  "publisher": {
-    "@type": "Organization",
-    "name": "MonBilanFacile.fr",
-    "url": "https://monbilanfacile.fr"
-  },
-  "@graph": [
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Peut-on intégrer les frais de notaire dans le crédit immobilier ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, certaines banques acceptent de financer les frais de notaire dans le prêt immobilier (financement à 110 %), sous réserve de rester sous les 35 % de taux d'endettement fixés par le HCSF."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Les frais de notaire sont-ils déductibles des impôts ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pour une résidence principale, non. Pour un investissement locatif, ils peuvent être déduits des revenus fonciers (régime réel) ou amortis en LMNP."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Combien coûtent les frais de notaire pour un achat à 200 000 € dans l'ancien ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Environ 15 800 € soit ~7,9 % du prix : droits de mutation ~11 600 €, émoluments notaire TTC ~1 900 €, débours et formalités ~2 300 €."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Qui paie les frais de notaire, l'acheteur ou le vendeur ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Les frais de notaire sont à la charge de l'acheteur dans la grande majorité des transactions en France."
-          }
-        }
-      ]
-    }
-  ]
+  "publisher": { "@type": "Organization", "name": "MonBilanFacile.fr", "url": "https://monbilanfacile.fr" }
 }
 
 export default function FraisNotaireArticle() {
   return (
     <BlogLayout
-      title="Frais de Notaire 2026 — Barème Complet et Simulateur"
-      description="Calculez vos frais de notaire 2026 pour un achat immobilier neuf ou ancien. Droits de mutation, émoluments, débours — barème officiel et simulateur gratuit."
+      title="Calculateur Frais de Notaire 2026 — Neuf & Ancien"
+      description="Estimez précisément vos frais d'acquisition immobilière selon le barème officiel 2026. Calcul instantané pour biens neufs (2-3%) et anciens (7-8%)."
       canonical="/frais-notaire"
       date="Janvier 2026"
-      readTime="6 min"
-      tag="Immobilier"
+      readTime="5 min"
+      tag="Immobilier & Notaire"
+      tagColor="#059669"
+      tagBg="#ECFDF5"
       schema={schema}
+      editorialIntro={{
+        summary: "Les frais de notaire constituent un poste de coût souvent sous-estimé lors d'un achat immobilier. Contrairement aux idées reçues, ces frais sont en grande partie des taxes collectées par le notaire pour le compte de l'État — et non sa rémunération personnelle. La distinction neuf/ancien est fondamentale car elle peut représenter une différence de 5 points de pourcentage sur le prix d'achat.",
+        points: [
+          "Dans l'ancien : comptez 7 à 8% du prix — dont 5,80% de droits de mutation fiscaux",
+          "Dans le neuf : seulement 2 à 3% — la TVA 20% est déjà incluse dans le prix promoteur",
+          "Les émoluments du notaire suivent un barème dégressif réglementé — négociables à 20% au-delà de 150 000 €",
+          "Les frais de garantie (hypothèque ~1,4% ou caution ~0,8%) s'ajoutent si financement par crédit"
+        ],
+        source: "Décret n°2016-230 du 26 février 2016 — Ministère de la Justice 2026"
+      }}
       ToolComponent={FraisNotairePage}
     >
       <ArticleContent />
