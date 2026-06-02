@@ -165,17 +165,6 @@ export default function HomePage() {
             </div>
           </button>
         ))}
-
-        {/* AdSense card */}
-        <div className="rounded-2xl flex items-center justify-center"
-          style={{ background: '#F8FAFC', border: '1.5px dashed #CBD5E1', minHeight: '180px' }}>
-          <div className="text-center p-4">
-            <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#94A3B8' }}>
-              Publicité
-            </p>
-            <p className="text-xs mt-1" style={{ color: '#CBD5E1' }}>Google AdSense</p>
-          </div>
-        </div>
       </div>
 
       {/* SEO content */}
