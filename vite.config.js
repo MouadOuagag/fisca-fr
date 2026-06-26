@@ -12,11 +12,15 @@ export default defineConfig({
   ],
   build: {
     outDir: 'dist',
+    minify: 'terser',
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks(id) {
           if (['react', 'react-dom', 'react-router-dom'].some(pkg => id.includes(`/node_modules/${pkg}/`))) return 'vendor'
           if (id.includes('/node_modules/recharts/')) return 'charts'
+          if (id.includes('/node_modules/framer-motion/')) return 'motion'
+          if (id.includes('/node_modules/lucide-react/')) return 'icons'
         }
       }
     }
