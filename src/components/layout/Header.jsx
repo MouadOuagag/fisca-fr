@@ -41,7 +41,10 @@ export default function Header() {
             ))}
           </nav>
           {/* Mobile menu */}
-          <button className="lg:hidden text-white p-1.5" onClick={() => setMobileOpen(!mobileOpen)}>
+          <button
+            aria-label="Ouvrir le menu de navigation"
+            className="lg:hidden text-white p-1.5"
+            onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>

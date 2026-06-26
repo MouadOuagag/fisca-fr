@@ -17,10 +17,12 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (['react', 'react-dom', 'react-router-dom'].some(pkg => id.includes(`/node_modules/${pkg}/`))) return 'vendor'
-          if (id.includes('/node_modules/recharts/')) return 'charts'
-          if (id.includes('/node_modules/framer-motion/')) return 'motion'
-          if (id.includes('/node_modules/lucide-react/')) return 'icons'
+          if (id.includes('node_modules')) {
+            if (id.includes('recharts') || id.includes('d3')) return 'charts'
+            if (id.includes('react-dom') || id.includes('react-router')) return 'vendor'
+            if (id.includes('lucide')) return 'icons'
+            if (id.includes('framer-motion')) return 'motion'
+          }
         }
       }
     }
