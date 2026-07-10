@@ -5,6 +5,11 @@ button, a[role="button"], .btn {
   transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
 }
 
+button:not(.badge):not(.tag),
+a[role="button"] {
+  min-height: 44px;
+}
+
 /* NavLinks Header */
 .nav-link {
   position: relative;
