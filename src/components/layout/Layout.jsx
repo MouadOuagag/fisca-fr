@@ -4,9 +4,9 @@ import CookieBanner from '../ui/CookieBanner'
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: '#F4F6FA' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'white' }}>
       <Header />
-      <main id="main-content" className="flex-1 w-full max-w-5xl mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6">
+      <main id="main-content" style={{ flex: 1, maxWidth: '1100px', margin: '0 auto', width: '100%', padding: '2rem 1.5rem 3rem' }}>
         {children}
       </main>
       <Footer />
