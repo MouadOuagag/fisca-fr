@@ -64,7 +64,7 @@ export default function Header() {
         </NavLink>
 
         {/* Desktop Nav */}
-        <nav aria-label="Navigation principale" style={{ display: 'none' }} className="lg:flex">
+        <nav aria-label="Navigation principale" className="hidden lg:flex items-center">
           <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
 
             {/* Outils dropdown */}
