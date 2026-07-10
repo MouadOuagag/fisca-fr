@@ -1,154 +1,155 @@
 import SEOHead from '../components/seo/SEOHead'
 import { NavLink } from 'react-router-dom'
+import { Shield, Zap, BookOpen, Mail, MapPin, ExternalLink } from 'lucide-react'
 
-const CARD_SHADOW = '0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)'
+const CARD = { background: 'white', border: '1.5px solid #E2E8F0', borderRadius: '16px', padding: '1.5rem', marginBottom: '1rem' }
 
 export default function AProposPage() {
   return (
-    <div>
+    <>
       <SEOHead
-        title="À propos de MonBilanFacile.fr"
-        description="MonBilanFacile.fr est une plateforme française de simulateurs fiscaux gratuits. Découvrez notre mission, nos sources et notre engagement pour la transparence fiscale."
+        title="À propos de MonBilanFacile.fr — Référence Fiscale Française 2026"
+        description="Découvrez MonBilanFacile.fr : notre mission, notre équipe et notre engagement pour des simulateurs fiscaux français gratuits, précis et accessibles à tous."
         canonical="/a-propos"
       />
 
-      <div className="mb-6">
-        <div className="flex items-center gap-2 mb-1">
-          <div className="w-1.5 h-6 rounded-full" style={{ background: '#1E5FCC' }} />
-          <span className="text-xs font-bold uppercase tracking-widest"
-            style={{ color: '#1E5FCC' }}>Notre mission</span>
+      <div style={{ marginBottom: '1.5rem' }}>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: '20px', padding: '4px 12px', marginBottom: '0.75rem' }}>
+          <span style={{ fontSize: '11px', fontWeight: 700, color: '#1E5FCC', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Notre mission</span>
         </div>
-        <h1 className="text-2xl font-bold tracking-tight" style={{ color: '#0F172A' }}>
+        <h1 style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)', fontWeight: 800, color: '#0F172A', letterSpacing: '-0.03em', lineHeight: 1.2, marginBottom: '0.5rem' }}>
           À propos de MonBilanFacile.fr
         </h1>
-        <p className="text-sm mt-1.5 max-w-2xl" style={{ color: '#64748B' }}>
-          La référence fiscale française gratuite pour les salariés,
-          indépendants et futurs propriétaires.
+        <p style={{ fontSize: '15px', color: '#64748B', lineHeight: 1.7, maxWidth: '600px' }}>
+          La référence fiscale française gratuite pour les salariés, indépendants et futurs propriétaires.
         </p>
       </div>
 
-      <div className="space-y-5">
-
-        <div className="rounded-2xl p-6" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
-          <h2 className="text-lg font-bold mb-3" style={{ color: '#0F172A' }}>
-            Notre mission
-          </h2>
-          <p className="text-sm leading-relaxed mb-3" style={{ color: '#475569' }}>
-            MonBilanFacile.fr est né d'un constat simple : comprendre sa fiscalité en France
-            est complexe, et les outils disponibles sont souvent incomplets, payants ou difficiles
-            à utiliser. Notre mission est de démocratiser l'accès à l'information fiscale en
-            proposant des simulateurs gratuits, précis et mis à jour selon la législation française
-            en vigueur.
-          </p>
-          <p className="text-sm leading-relaxed mb-3" style={{ color: '#475569' }}>
-            Que vous soyez salarié souhaitant comprendre votre fiche de paie, auto-entrepreneur
-            cherchant à calculer vos cotisations URSSAF, ou futur propriétaire estimant vos frais
-            de notaire, MonBilanFacile.fr vous accompagne avec des calculs instantanés et des
-            explications claires.
-          </p>
-          <p className="text-sm leading-relaxed" style={{ color: '#475569' }}>
-            Tous nos outils sont développés en collaboration avec des sources officielles françaises :
-            URSSAF, Direction Générale des Finances Publiques (DGFiP), Légifrance, et le
-            Haut Conseil de Stabilité Financière (HCSF). Chaque taux et barème est vérifié
-            et mis à jour à chaque changement de législation.
-          </p>
-        </div>
-
-        <div className="rounded-2xl p-6" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
-          <h2 className="text-lg font-bold mb-3" style={{ color: '#0F172A' }}>
-            Nos outils fiscaux 2026
-          </h2>
-          <p className="text-sm leading-relaxed mb-4" style={{ color: '#475569' }}>
-            MonBilanFacile.fr propose 5 simulateurs fiscaux entièrement gratuits,
-            sans inscription et sans publicité intrusive :
-          </p>
-          <div className="space-y-3">
-            {[
-              { to: '/brut-net', title: 'Calculateur Brut → Net', desc: 'Convertissez votre salaire brut en net avec les taux URSSAF et AGIRC-ARRCO 2026. Inclut le calcul du prélèvement à la source, du coût employeur et du salaire horaire.' },
-              { to: '/auto-entrepreneur', title: 'Simulateur Auto-Entrepreneur', desc: 'Calculez vos cotisations sociales URSSAF (12,3% à 23,2%), vérifiez vos seuils TVA 2026 et estimez votre revenu net selon votre activité.' },
-              { to: '/frais-notaire', title: 'Simulateur Frais de Notaire', desc: 'Estimez vos frais d\'acquisition immobilière selon le barème officiel 2026 — environ 7 à 8% dans l\'ancien, 2 à 3% dans le neuf.' },
-              { to: '/teletravail', title: 'Calculateur Télétravail', desc: 'Calculez vos indemnités télétravail exonérées selon le forfait URSSAF 2026 (2,70€/jour) ou la méthode des frais réels.' },
-              { to: '/credit', title: 'Simulateur Crédit Immobilier', desc: 'Calculez vos mensualités, le coût total de votre crédit et vérifiez votre taux d\'endettement selon la règle HCSF des 35%.' },
-            ].map(({ to, title, desc }) => (
-              <div key={to} className="flex gap-3 p-3 rounded-xl" style={{ background: '#F8FAFC' }}>
-                <div className="w-1 rounded-full flex-shrink-0" style={{ background: '#1E5FCC' }} />
-                <div>
-                  <NavLink to={to} className="text-sm font-bold" style={{ color: '#1E5FCC' }}>
-                    {title}
-                  </NavLink>
-                  <p className="text-xs leading-relaxed mt-1" style={{ color: '#64748B' }}>{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="rounded-2xl p-6" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
-          <h2 className="text-lg font-bold mb-3" style={{ color: '#0F172A' }}>
-            Nos sources officielles
-          </h2>
-          <p className="text-sm leading-relaxed mb-4" style={{ color: '#475569' }}>
-            Tous nos calculs sont basés exclusivement sur des sources officielles françaises :
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {[
-              { name: 'URSSAF', desc: 'Cotisations sociales, taux micro-entrepreneur', url: 'https://www.urssaf.fr' },
-              { name: 'DGFiP — impots.gouv.fr', desc: 'Barème IR, grille PAS, décote', url: 'https://www.impots.gouv.fr' },
-              { name: 'Légifrance', desc: 'Textes de loi, décrets, CGI', url: 'https://www.legifrance.gouv.fr' },
-              { name: 'AGIRC-ARRCO', desc: 'Taux retraite complémentaire 2026', url: 'https://www.agirc-arrco.fr' },
-              { name: 'Banque de France', desc: 'Taux immobiliers, règle HCSF', url: 'https://www.banque-france.fr' },
-              { name: 'Service-public.fr', desc: 'Droits et démarches officielles', url: 'https://www.service-public.fr' },
-            ].map(({ name, desc, url }) => (
-              <a key={name} href={url} target="_blank" rel="noopener noreferrer"
-                className="flex items-start gap-2.5 p-3 rounded-xl transition-all hover:opacity-80"
-                style={{ background: '#F8FAFC', textDecoration: 'none' }}>
-                <span style={{ color: '#1E5FCC', fontSize: '16px' }}>🔗</span>
-                <div>
-                  <p className="text-sm font-semibold" style={{ color: '#0F172A' }}>{name}</p>
-                  <p className="text-xs" style={{ color: '#64748B' }}>{desc}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="rounded-2xl p-6" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
-          <h2 className="text-lg font-bold mb-3" style={{ color: '#0F172A' }}>
-            Avertissement légal
-          </h2>
-          <p className="text-sm leading-relaxed mb-3" style={{ color: '#475569' }}>
-            Les simulateurs proposés sur MonBilanFacile.fr sont fournis à titre purement
-            indicatif et pédagogique. Ils ne constituent en aucun cas un conseil fiscal,
-            juridique ou comptable personnalisé.
-          </p>
-          <p className="text-sm leading-relaxed mb-3" style={{ color: '#475569' }}>
-            Les résultats obtenus dépendent des paramètres saisis et peuvent différer de
-            votre situation réelle selon votre convention collective, vos avantages en nature,
-            votre situation familiale ou d'autres facteurs spécifiques.
-          </p>
-          <p className="text-sm leading-relaxed" style={{ color: '#475569' }}>
-            Pour toute décision fiscale, immobilière ou financière importante, nous vous
-            recommandons de consulter un professionnel qualifié : expert-comptable, notaire,
-            conseiller financier ou avocat fiscaliste.
-          </p>
-        </div>
-
-        <div className="rounded-2xl p-6" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
-          <h2 className="text-lg font-bold mb-3" style={{ color: '#0F172A' }}>
-            Contact
-          </h2>
-          <p className="text-sm leading-relaxed mb-2" style={{ color: '#475569' }}>
-            Pour toute question, suggestion ou signalement d'erreur dans nos calculs :
-          </p>
-          <p className="text-sm font-semibold" style={{ color: '#1E5FCC' }}>
-            📧 contact@monbilanfacile.fr
-          </p>
-          <p className="text-sm mt-2" style={{ color: '#475569' }}>
-            Éditeur : Mogo — Paris, France
-          </p>
-        </div>
-
+      <div style={CARD}>
+        <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#0F172A', marginBottom: '1rem' }}>Notre mission</h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.8, color: '#475569', marginBottom: '1rem' }}>
+          MonBilanFacile.fr est né d'un constat simple : comprendre sa fiscalité en France est complexe,
+          et les outils disponibles sont souvent incomplets, payants ou difficiles à utiliser.
+          Notre mission est de <strong>démocratiser l'accès à l'information fiscale</strong> en proposant
+          des simulateurs gratuits, précis et mis à jour selon la législation française en vigueur.
+        </p>
+        <p style={{ fontSize: '14px', lineHeight: 1.8, color: '#475569', marginBottom: '1rem' }}>
+          Que vous soyez salarié souhaitant comprendre votre fiche de paie, auto-entrepreneur cherchant
+          à calculer vos cotisations URSSAF, ou futur propriétaire estimant vos frais de notaire,
+          MonBilanFacile.fr vous accompagne avec des calculs instantanés et des explications claires.
+        </p>
+        <p style={{ fontSize: '14px', lineHeight: 1.8, color: '#475569' }}>
+          Tous nos outils sont développés en s'appuyant sur des sources officielles françaises :
+          URSSAF, Direction Générale des Finances Publiques (DGFiP), Légifrance, AGIRC-ARRCO
+          et le Haut Conseil de Stabilité Financière (HCSF). Chaque taux et barème est vérifié
+          et mis à jour à chaque changement de législation.
+        </p>
       </div>
-    </div>
+
+      <div style={CARD}>
+        <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#0F172A', marginBottom: '1rem' }}>L'éditeur</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          {[
+            { icon: Mail,   label: 'Email',        value: 'contact@monbilanfacile.fr' },
+            { icon: MapPin, label: 'Localisation', value: 'Paris, France' },
+            { icon: Shield, label: 'Statut',       value: 'Personne physique — Éditeur indépendant' },
+          ].map(({ icon: Icon, label, value }) => (
+            <div key={label} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', background: '#F8FAFC', borderRadius: '10px' }}>
+              <div style={{ width: '36px', height: '36px', background: '#EFF6FF', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <Icon size={16} color="#1E5FCC" aria-hidden="true" />
+              </div>
+              <div>
+                <p style={{ fontSize: '11px', fontWeight: 700, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{label}</p>
+                <p style={{ fontSize: '14px', fontWeight: 600, color: '#0F172A' }}>{value}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={CARD}>
+        <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#0F172A', marginBottom: '1rem' }}>Nos 5 simulateurs fiscaux 2026</h2>
+        <p style={{ fontSize: '14px', color: '#475569', lineHeight: 1.7, marginBottom: '1rem' }}>
+          MonBilanFacile.fr propose 5 simulateurs fiscaux entièrement gratuits, sans inscription
+          et sans publicité intrusive :
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          {[
+            { to: '/brut-net',          label: 'Calculateur Brut → Net',       desc: 'Convertissez votre salaire brut en net avec les taux URSSAF et AGIRC-ARRCO 2026. 4 statuts : salarié non-cadre, cadre, fonction publique, libéral.' },
+            { to: '/auto-entrepreneur', label: 'Simulateur Auto-Entrepreneur', desc: 'Calculez vos cotisations sociales URSSAF (12,3% à 23,2%), vérifiez vos seuils TVA 2026 et estimez votre revenu net.' },
+            { to: '/frais-notaire',     label: 'Simulateur Frais de Notaire',  desc: 'Estimez vos frais d\'acquisition immobilière selon le barème officiel 2026 — 7 à 8% dans l\'ancien, 2 à 3% dans le neuf.' },
+            { to: '/teletravail',       label: 'Calculateur Télétravail',       desc: 'Calculez vos indemnités télétravail exonérées selon le forfait URSSAF 2026 (2,70€/jour) ou la méthode des frais réels.' },
+            { to: '/credit',            label: 'Simulateur Crédit Immobilier', desc: 'Calculez vos mensualités, coût total et taux d\'endettement HCSF. Tableau d\'amortissement inclus.' },
+          ].map(({ to, label, desc }) => (
+            <div key={to} style={{ display: 'flex', gap: '12px', padding: '12px', background: '#F8FAFC', borderRadius: '10px', alignItems: 'flex-start' }}>
+              <div style={{ width: '3px', borderRadius: '2px', background: '#1E5FCC', alignSelf: 'stretch', flexShrink: 0 }} />
+              <div>
+                <NavLink to={to} style={{ fontSize: '14px', fontWeight: 700, color: '#1E5FCC', textDecoration: 'none' }}>
+                  {label}
+                </NavLink>
+                <p style={{ fontSize: '13px', color: '#64748B', lineHeight: 1.6, marginTop: '3px' }}>{desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={CARD}>
+        <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#0F172A', marginBottom: '1rem' }}>Nos sources officielles</h2>
+        <p style={{ fontSize: '14px', color: '#475569', lineHeight: 1.7, marginBottom: '1rem' }}>
+          Tous nos calculs sont basés exclusivement sur des sources officielles françaises :
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '0.75rem' }}>
+          {[
+            { name: 'URSSAF',                 desc: 'Cotisations sociales et taux micro-entrepreneur', url: 'https://www.urssaf.fr' },
+            { name: 'DGFiP — impots.gouv.fr', desc: 'Barème IR, grille PAS, décote 2026',             url: 'https://www.impots.gouv.fr' },
+            { name: 'Légifrance',             desc: 'Textes de loi, décrets, CGI',                    url: 'https://www.legifrance.gouv.fr' },
+            { name: 'AGIRC-ARRCO',            desc: 'Taux retraite complémentaire 2026',              url: 'https://www.agirc-arrco.fr' },
+            { name: 'Banque de France',       desc: 'Taux immobiliers et règle HCSF 35%',             url: 'https://www.banque-france.fr' },
+            { name: 'Service-public.fr',      desc: 'Droits et démarches officielles',                url: 'https://www.service-public.fr' },
+          ].map(({ name, desc, url }) => (
+            <a key={name} href={url} target="_blank" rel="noopener noreferrer"
+              style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', padding: '12px', background: '#F8FAFC', borderRadius: '10px', textDecoration: 'none', transition: 'background 0.15s' }}
+              onMouseEnter={e => e.currentTarget.style.background = '#EFF6FF'}
+              onMouseLeave={e => e.currentTarget.style.background = '#F8FAFC'}>
+              <ExternalLink size={14} color="#1E5FCC" style={{ marginTop: '2px', flexShrink: 0 }} aria-hidden="true" />
+              <div>
+                <p style={{ fontSize: '13px', fontWeight: 700, color: '#0F172A' }}>{name}</p>
+                <p style={{ fontSize: '12px', color: '#64748B', marginTop: '2px' }}>{desc}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ ...CARD, background: '#FFF7ED', border: '1.5px solid #FED7AA' }}>
+        <h2 style={{ fontSize: '16px', fontWeight: 800, color: '#9A3412', marginBottom: '0.75rem' }}>
+          ⚠ Avertissement légal important
+        </h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#C2410C', marginBottom: '0.75rem' }}>
+          Les simulateurs proposés sur MonBilanFacile.fr sont fournis à titre purement indicatif et
+          pédagogique. Ils ne constituent en aucun cas un conseil fiscal, juridique, comptable ou
+          financier personnalisé.
+        </p>
+        <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#C2410C' }}>
+          Pour toute décision fiscale ou financière importante, nous vous recommandons de consulter
+          un professionnel qualifié : expert-comptable, notaire, conseiller financier ou avocat fiscaliste.
+        </p>
+      </div>
+
+      <div style={{ ...CARD, textAlign: 'center' }}>
+        <BookOpen size={24} color="#1E5FCC" style={{ marginBottom: '0.75rem' }} aria-hidden="true" />
+        <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>
+          Découvrez nos guides fiscaux
+        </h2>
+        <p style={{ fontSize: '14px', color: '#64748B', marginBottom: '1rem' }}>
+          Des explications claires sur la fiscalité française 2026, rédigées par nos experts.
+        </p>
+        <NavLink to="/blog"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '11px 22px', background: '#0B1F3A', color: 'white', borderRadius: '12px', fontSize: '14px', fontWeight: 700, textDecoration: 'none' }}>
+          Voir tous les articles →
+        </NavLink>
+      </div>
+    </>
   )
 }

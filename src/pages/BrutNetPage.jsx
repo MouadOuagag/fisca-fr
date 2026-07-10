@@ -15,7 +15,7 @@ const STATUTS = [
 ]
 
 const CARD        = { background: 'white', border: '1.5px solid #E2E8F0', borderRadius: '16px', padding: '1.25rem' }
-const LABEL       = { fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.6px', color: '#94A3B8', marginBottom: '0.5rem', display: 'block' }
+const LABEL       = { fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.6px', color: '#64748B', marginBottom: '0.5rem', display: 'block' }
 const INPUT_STYLE = { width: '100%', border: '1.5px solid #E2E8F0', borderRadius: '10px', padding: '10px 14px', fontSize: '15px', fontWeight: 700, color: '#0F172A', background: 'white', outline: 'none', fontFamily: 'inherit', transition: 'border-color 0.15s, box-shadow 0.15s' }
 const RESULT_INPUT = { ...INPUT_STYLE, background: '#F8FAFC', color: '#1E5FCC', cursor: 'default' }
 
@@ -105,9 +105,9 @@ export default function BrutNetPage() {
             Simulateur fiscal 2026
           </span>
         </div>
-        <h1 style={{ fontSize: 'clamp(1.4rem, 4vw, 2rem)', fontWeight: 800, color: '#0F172A', letterSpacing: '-0.03em', lineHeight: 1.2, marginBottom: '0.5rem' }}>
+        <h2 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)', fontWeight: 800, color: '#0F172A', letterSpacing: '-0.03em', lineHeight: 1.2, marginBottom: '0.5rem' }}>
           Calcul du Salaire Brut en Net
-        </h1>
+        </h2>
         <p style={{ fontSize: '14px', color: '#64748B', lineHeight: 1.6, maxWidth: '600px' }}>
           Saisissez votre salaire en horaire, mensuel ou annuel — les 3 champs se synchronisent automatiquement. Cotisations URSSAF &amp; AGIRC-ARRCO 2026.
         </p>
@@ -144,7 +144,7 @@ export default function BrutNetPage() {
                     onFocus={e => { e.target.style.borderColor = '#1E5FCC'; e.target.style.boxShadow = '0 0 0 3px rgba(30,95,204,0.1)' }}
                     onBlur={e => { e.target.style.borderColor = '#E2E8F0'; e.target.style.boxShadow = 'none' }}
                   />
-                  <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#94A3B8', fontWeight: 600, pointerEvents: 'none' }}>€/h</span>
+                  <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#64748B', fontWeight: 600, pointerEvents: 'none' }}>€/h</span>
                 </div>
               </div>
 
@@ -170,7 +170,7 @@ export default function BrutNetPage() {
                     onFocus={e => { e.target.style.borderColor = '#1E5FCC'; e.target.style.boxShadow = '0 0 0 3px rgba(30,95,204,0.1)' }}
                     onBlur={e => { e.target.style.borderColor = '#E2E8F0'; e.target.style.boxShadow = 'none' }}
                   />
-                  <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#94A3B8', fontWeight: 600, pointerEvents: 'none' }}>€</span>
+                  <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#64748B', fontWeight: 600, pointerEvents: 'none' }}>€</span>
                 </div>
                 <input
                   type="range"
@@ -204,7 +204,7 @@ export default function BrutNetPage() {
                     onFocus={e => { e.target.style.borderColor = '#1E5FCC'; e.target.style.boxShadow = '0 0 0 3px rgba(30,95,204,0.1)' }}
                     onBlur={e => { e.target.style.borderColor = '#E2E8F0'; e.target.style.boxShadow = 'none' }}
                   />
-                  <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#94A3B8', fontWeight: 600, pointerEvents: 'none' }}>€/an</span>
+                  <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#64748B', fontWeight: 600, pointerEvents: 'none' }}>€/an</span>
                 </div>
               </div>
 
@@ -232,6 +232,7 @@ export default function BrutNetPage() {
                       background: statut === s.id ? '#EFF6FF' : 'white',
                       cursor: 'pointer',
                       transition: 'all 0.15s',
+                      minHeight: '52px',
                     }}>
                     <input
                       type="radio"
@@ -245,7 +246,7 @@ export default function BrutNetPage() {
                     />
                     <div>
                       <p style={{ fontSize: '12px', fontWeight: 700, color: statut === s.id ? '#1E5FCC' : '#0F172A', lineHeight: 1.2 }}>{s.label}</p>
-                      <p style={{ fontSize: '10px', color: '#94A3B8' }}>{s.sub}</p>
+                      <p style={{ fontSize: '10px', color: '#64748B' }}>{s.sub}</p>
                     </div>
                   </label>
                 ))}
@@ -302,7 +303,7 @@ export default function BrutNetPage() {
                     aria-label={`${m} mois`}
                     style={{
                       flex: 1,
-                      padding: '8px 4px',
+                      padding: '10px 4px',
                       borderRadius: '8px',
                       border: `1.5px solid ${moisPrime === m ? '#1E5FCC' : '#E2E8F0'}`,
                       background: moisPrime === m ? '#1E5FCC' : 'white',
@@ -312,7 +313,7 @@ export default function BrutNetPage() {
                       cursor: 'pointer',
                       fontFamily: 'inherit',
                       transition: 'all 0.15s',
-                      minHeight: '36px',
+                      minHeight: '44px',
                     }}>
                     {m}
                   </button>
@@ -363,7 +364,7 @@ export default function BrutNetPage() {
                       value={heuresMois > 0 ? (res.netApresImpot / heuresMois).toFixed(2) : '0'}
                       aria-label="Salaire horaire net"
                       style={RESULT_INPUT} />
-                    <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#94A3B8', fontWeight: 600 }}>€/h</span>
+                    <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#64748B', fontWeight: 600 }}>€/h</span>
                   </div>
                 </div>
 
@@ -375,7 +376,7 @@ export default function BrutNetPage() {
                       value={res.netAvantImpot.toFixed(2)}
                       aria-label="Salaire mensuel net avant impôt"
                       style={RESULT_INPUT} />
-                    <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#94A3B8', fontWeight: 600 }}>€</span>
+                    <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#64748B', fontWeight: 600 }}>€</span>
                   </div>
                 </div>
 
@@ -400,7 +401,7 @@ export default function BrutNetPage() {
                       value={res.netApresImpotAnnuel.toFixed(2)}
                       aria-label="Salaire annuel net après impôt"
                       style={RESULT_INPUT} />
-                    <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#94A3B8', fontWeight: 600 }}>€/an</span>
+                    <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#64748B', fontWeight: 600 }}>€/an</span>
                   </div>
                 </div>
 
@@ -412,7 +413,7 @@ export default function BrutNetPage() {
                       value={res.coutTotal.toFixed(2)}
                       aria-label="Coût total employeur mensuel"
                       style={{ ...RESULT_INPUT, color: '#DC2626' }} />
-                    <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#94A3B8', fontWeight: 600 }}>€</span>
+                    <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', color: '#64748B', fontWeight: 600 }}>€</span>
                   </div>
                 </div>
 
@@ -495,13 +496,13 @@ export default function BrutNetPage() {
             <div id="cotisations-detail" style={{ marginTop: '1rem' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
                 <div>
-                  <p style={{ fontSize: '11px', fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '0.5rem' }}>
+                  <p style={{ fontSize: '11px', fontWeight: 700, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '0.5rem' }}>
                     Mensuel net après impôts
                   </p>
                   <p style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1E5FCC' }}>{fmt(res.netApresImpot)}</p>
                 </div>
                 <div>
-                  <p style={{ fontSize: '11px', fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '0.5rem' }}>
+                  <p style={{ fontSize: '11px', fontWeight: 700, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '0.5rem' }}>
                     Annuel net après impôts
                   </p>
                   <p style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1E5FCC' }}>{fmt(res.netApresImpotAnnuel)}</p>
@@ -516,7 +517,7 @@ export default function BrutNetPage() {
                   <thead>
                     <tr>
                       {['Cotisation', 'Taux', 'Montant mensuel'].map(h => (
-                        <th key={h} scope="col" style={{ padding: '8px 12px', textAlign: 'left', fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', color: '#94A3B8', borderBottom: '1px solid #E2E8F0' }}>
+                        <th key={h} scope="col" style={{ padding: '8px 12px', textAlign: 'left', fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', color: '#64748B', borderBottom: '1px solid #E2E8F0' }}>
                           {h}
                         </th>
                       ))}
@@ -534,7 +535,7 @@ export default function BrutNetPage() {
                     ].map(([name, taux, montant]) => (
                       <tr key={name} style={{ borderBottom: '1px solid #F8FAFC' }}>
                         <td style={{ padding: '8px 12px', fontSize: '13px', color: '#475569' }}>{name}</td>
-                        <td style={{ padding: '8px 12px', fontSize: '13px', color: '#94A3B8' }}>{taux}</td>
+                        <td style={{ padding: '8px 12px', fontSize: '13px', color: '#64748B' }}>{taux}</td>
                         <td style={{ padding: '8px 12px', fontSize: '13px', fontWeight: 700, color: '#DC2626' }}>-{fmt(montant)}</td>
                       </tr>
                     ))}
@@ -552,7 +553,7 @@ export default function BrutNetPage() {
       )}
 
       {/* ── NOTE LÉGALE ── */}
-      <p style={{ fontSize: '11px', color: '#94A3B8', lineHeight: 1.6, textAlign: 'center', marginBottom: '1.5rem' }}
+      <p style={{ fontSize: '11px', color: '#64748B', lineHeight: 1.6, textAlign: 'center', marginBottom: '1.5rem' }}
         role="note">
         Simulation indicative — non contractuelle · Taux URSSAF &amp; AGIRC-ARRCO au 01/01/2026 ·
         PAS affiché = taux neutre si 0%, sinon votre taux personnalisé

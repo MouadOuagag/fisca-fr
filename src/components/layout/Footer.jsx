@@ -16,6 +16,7 @@ const sections = [
     title: 'Guides',
     links: [
       { to: '/blog',                                  label: 'Tous les articles' },
+      { to: '/commencer',                             label: 'Tous les simulateurs' },
       { to: '/articles/impot-revenu-2026',            label: 'Impôt sur le revenu' },
       { to: '/articles/dividendes-flat-tax-2026',     label: 'Flat Tax & Dividendes' },
       { to: '/articles/cotisations-tns-2026',         label: 'Cotisations TNS' },

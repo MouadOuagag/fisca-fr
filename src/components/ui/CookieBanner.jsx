@@ -5,16 +5,26 @@ export default function CookieBanner() {
 
   useEffect(() => {
     const consent = localStorage.getItem('cookie-consent')
-    if (!consent) setVisible(true)
+    const consentDate = localStorage.getItem('cookie-consent-date')
+    const now = Date.now()
+    const thirteenMonths = 13 * 30 * 24 * 60 * 60 * 1000
+
+    if (!consent || (consentDate && now - parseInt(consentDate) > thirteenMonths)) {
+      localStorage.removeItem('cookie-consent')
+      localStorage.removeItem('cookie-consent-date')
+      setVisible(true)
+    }
   }, [])
 
   function accept() {
     localStorage.setItem('cookie-consent', 'accepted')
+    localStorage.setItem('cookie-consent-date', Date.now().toString())
     setVisible(false)
   }
 
   function decline() {
     localStorage.setItem('cookie-consent', 'declined')
+    localStorage.setItem('cookie-consent-date', Date.now().toString())
     setVisible(false)
   }
 

@@ -191,3 +191,5 @@ button, a, [role="button"] {
     display: none !important;
   }
 }
+
+.text-muted-accessible { color: #64748B !important; }

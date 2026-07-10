@@ -11,6 +11,7 @@ const articles = [
     description: 'Comprendre le passage du brut au net : cotisations URSSAF, AGIRC-ARRCO, prélèvement à la source et coût employeur. Guide complet 2026.',
     date: 'Janvier 2026',
     readTime: '5 min',
+    hasTool: true,
     tag: 'Salaire & Fiscalité',
     color: '#1E5FCC',
     bg: '#EFF6FF',
@@ -21,6 +22,7 @@ const articles = [
     description: "Tout comprendre sur les cotisations URSSAF (12,3% à 23,2%), les nouveaux seuils TVA 2026 et le versement libératoire pour micro-entrepreneurs.",
     date: 'Janvier 2026',
     readTime: '6 min',
+    hasTool: true,
     tag: 'Freelance & Micro-entreprise',
     color: '#7C3AED',
     bg: '#EEF2FF',
@@ -31,6 +33,7 @@ const articles = [
     description: "Comprendre la composition des frais d'acquisition immobilière : droits de mutation (5,80% ancien), émoluments notaire, débours et garanties.",
     date: 'Janvier 2026',
     readTime: '5 min',
+    hasTool: true,
     tag: 'Immobilier & Notaire',
     color: '#059669',
     bg: '#ECFDF5',
@@ -41,6 +44,7 @@ const articles = [
     description: 'Forfait journalier URSSAF à 2,70 €/jour, remboursement internet, électricité et mobilier. Tout sur les indemnités exonérées de charges.',
     date: 'Janvier 2026',
     readTime: '5 min',
+    hasTool: true,
     tag: 'Salarié & Télétravail',
     color: '#0891B2',
     bg: '#ECFEFF',
@@ -51,6 +55,7 @@ const articles = [
     description: "Taux immobiliers 2026, règle HCSF des 35%, tableau d'amortissement et stratégies pour réduire le coût total de votre emprunt.",
     date: 'Janvier 2026',
     readTime: '6 min',
+    hasTool: true,
     tag: 'Immobilier & Crédit',
     color: '#DC2626',
     bg: '#FFF1F2',
@@ -61,6 +66,7 @@ const articles = [
     description: "Barème progressif IR 2026, quotient familial, décote et réductions d'impôt. Guide complet avec exemples chiffrés.",
     date: 'Janvier 2026',
     readTime: '7 min',
+    hasTool: false,
     tag: 'Fiscalité & IR',
     color: '#1E5FCC',
     bg: '#EFF6FF',
@@ -71,6 +77,7 @@ const articles = [
     description: 'Tout comprendre sur la Flat Tax (PFU 30%) : calcul, option barème progressif, abattement 40% et optimisation pour gérants de société.',
     date: 'Janvier 2026',
     readTime: '6 min',
+    hasTool: false,
     tag: 'Dividendes & Capital',
     color: '#059669',
     bg: '#ECFDF5',
@@ -81,6 +88,7 @@ const articles = [
     description: "Taux d'imposition 36,2%, abattements pour durée de détention, exonération résidence principale. Guide complet 2026.",
     date: 'Janvier 2026',
     readTime: '6 min',
+    hasTool: false,
     tag: 'Immobilier & Fiscalité',
     color: '#7C3AED',
     bg: '#EEF2FF',
@@ -91,6 +99,7 @@ const articles = [
     description: 'Taux de cotisations sociales des travailleurs non-salariés 2026 : SSI, CIPAV, calcul sur revenu N-2 et optimisation.',
     date: 'Janvier 2026',
     readTime: '6 min',
+    hasTool: false,
     tag: 'TNS & Indépendants',
     color: '#DC2626',
     bg: '#FFF1F2',
@@ -101,6 +110,7 @@ const articles = [
     description: "Plafonds d'exonération 3 000 € ou 6 000 €, conditions de versement, fiscalité et mise en place de la PPV 2026.",
     date: 'Janvier 2026',
     readTime: '5 min',
+    hasTool: false,
     tag: 'Primes & Avantages',
     color: '#0891B2',
     bg: '#ECFEFF',
@@ -111,6 +121,7 @@ const articles = [
     description: "Calcul des indemnités légales (1/4 par année jusqu'à 10 ans), fiscalité, rupture conventionnelle et délais de contestation.",
     date: 'Janvier 2026',
     readTime: '7 min',
+    hasTool: false,
     tag: 'Emploi & Droits',
     color: '#F59E0B',
     bg: '#FFFBEB',
@@ -177,7 +188,7 @@ export default function BlogIndex() {
 
       {/* Articles list */}
       <div className="space-y-4">
-        {articles.map(({ to, title, description, date, readTime, tag, color, bg }) => (
+        {articles.map(({ to, title, description, date, readTime, tag, color, bg, hasTool }) => (
           <article key={to}
             onClick={() => navigate(to)}
             className="rounded-2xl p-5 sm:p-6 cursor-pointer transition-all hover:scale-[1.005]"
@@ -220,7 +231,7 @@ export default function BlogIndex() {
                 {/* CTA */}
                 <div className="flex items-center gap-1.5 text-sm font-semibold"
                   style={{ color }}>
-                  Lire l'article + accéder au simulateur
+                  {hasTool ? "Lire l'article + accéder au simulateur" : "Lire l'article complet"}
                   <ArrowRight size={14} />
                 </div>
               </div>
