@@ -177,3 +177,17 @@ button, a, [role="button"] {
   min-height: unset;
   min-width: unset;
 }
+
+/* Forcer bottom nav visible seulement mobile */
+@media (min-width: 1024px) {
+  nav[aria-label="Navigation principale mobile"] {
+    display: none !important;
+  }
+}
+
+/* Forcer header nav visible seulement desktop */
+@media (max-width: 1023px) {
+  header nav[aria-label="Navigation principale"] {
+    display: none !important;
+  }
+}
