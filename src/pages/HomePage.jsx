@@ -85,7 +85,7 @@ export default function HomePage() {
       />
 
       {/* ── HERO ── */}
-      <section style={{ textAlign: 'center', padding: '4rem 1rem 3rem', maxWidth: '700px', margin: '0 auto' }}>
+      <section className="fade-in-up" style={{ textAlign: 'center', padding: '4rem 1rem 3rem', maxWidth: '700px', margin: '0 auto' }}>
 
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: '20px', padding: '5px 14px', marginBottom: '1.5rem' }}>
           <span style={{ fontSize: '11px', fontWeight: 700, color: '#1E5FCC', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
@@ -104,13 +104,11 @@ export default function HomePage() {
         </p>
 
         <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
-          <button onClick={() => navigate('/commencer')}
-            style={{ padding: '13px 24px', background: '#0B1F3A', color: 'white', border: 'none', borderRadius: '13px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit', transition: 'opacity 0.15s' }}
-            onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
-            onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
+          <button onClick={() => navigate('/commencer')} className="btn-primary"
+            style={{ padding: '13px 24px', background: '#0B1F3A', color: 'white', border: 'none', borderRadius: '13px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
             Trouver mon simulateur →
           </button>
-          <button onClick={() => navigate('/brut-net')}
+          <button onClick={() => navigate('/brut-net')} className="btn-primary"
             style={{ padding: '13px 24px', background: 'white', color: '#0F172A', border: '1.5px solid #E2E8F0', borderRadius: '13px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
             Calculateur Brut → Net
           </button>
@@ -145,10 +143,10 @@ export default function HomePage() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
           {tools.map(({ to, icon: Icon, color, bg, label, desc, tag, tagColor, tagBg }) => (
-            <button key={to} onClick={() => navigate(to)}
-              style={{ textAlign: 'left', background: 'white', border: '1.5px solid #E2E8F0', borderRadius: '20px', padding: '1.5rem', cursor: 'pointer', transition: 'all 0.2s', fontFamily: 'inherit' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = color; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.08)' }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = '#E2E8F0'; e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = 'none' }}>
+            <button key={to} onClick={() => navigate(to)} className="card-hover"
+              style={{ textAlign: 'left', background: 'white', border: '1.5px solid #E2E8F0', borderRadius: '20px', padding: '1.5rem', cursor: 'pointer', fontFamily: 'inherit' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = color }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = '#E2E8F0' }}>
 
               <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <div style={{ width: '44px', height: '44px', background: bg, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

@@ -1,0 +1,190 @@
+/* ── MICRO-INTERACTIONS GLOBALES ── */
+
+/* Boutons */
+button, a[role="button"], .btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+/* NavLinks Header */
+.nav-link {
+  position: relative;
+  transition: color 0.15s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: #1E5FCC;
+  border-radius: 2px;
+  transition: left 0.2s ease, right 0.2s ease;
+}
+.nav-link:hover::after {
+  left: 0;
+  right: 0;
+}
+
+/* Cards hover */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+/* Inputs focus */
+input[type="number"],
+input[type="text"],
+input[type="range"] {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+input[type="number"]:focus,
+input[type="text"]:focus {
+  border-color: #1E5FCC !important;
+  box-shadow: 0 0 0 3px rgba(30,95,204,0.12) !important;
+  outline: none;
+}
+
+/* Toggle buttons */
+.toggle-btn {
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+.toggle-btn:active {
+  transform: scale(0.97);
+}
+
+/* CTA buttons */
+.btn-primary {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(11,31,58,0.25);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Result cards */
+.result-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.fade-in-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-up-delay-3 { animation-delay: 0.3s; opacity: 0; }
+
+/* Pulse animation pour les métriques */
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.metric-value {
+  animation: countUp 0.3s ease forwards;
+}
+
+/* Slide down pour dropdown */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.dropdown-menu {
+  animation: slideDown 0.2s ease forwards;
+}
+
+/* Spinner de chargement */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+/* Range slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 4px;
+  background: #E2E8F0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1E5FCC;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(30,95,204,0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(30,95,204,0.5);
+}
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.1);
+}
+
+/* Link hover */
+a {
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+/* Table rows */
+tbody tr {
+  transition: background 0.1s ease;
+}
+tbody tr:hover {
+  background: #F8FAFC;
+}
+
+/* Accordion / toggle */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Badge pulse */
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.7; }
+}
+.badge-new {
+  animation: badgePulse 2s ease infinite;
+}
+
+/* Footer links */
+footer a {
+  transition: color 0.15s ease, transform 0.15s ease;
+  display: inline-block;
+}
+footer a:hover {
+  color: white !important;
+  transform: translateX(3px);
+}

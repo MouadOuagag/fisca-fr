@@ -134,24 +134,24 @@ export default function BrutNetPage() {
       {/* ── METRIC CARDS ── */}
       {res && (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-          <div className="rounded-2xl p-5" style={{ background: '#0B1F3A', boxShadow: CARD_SHADOW }}>
+          <div className="result-card rounded-2xl p-5" style={{ background: '#0B1F3A', boxShadow: CARD_SHADOW }}>
             <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: 'rgba(255,255,255,0.45)' }}>Net après impôt</p>
-            <p className="text-2xl font-bold text-white">{fmt(res.netApresImpot)}</p>
+            <p className="metric-value text-2xl font-bold text-white">{fmt(res.netApresImpot)}</p>
             <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>Annuel : {fmt(res.netApresImpotAnnuel)}</p>
           </div>
-          <div className="rounded-2xl p-5" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
+          <div className="result-card rounded-2xl p-5" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
             <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: '#94A3B8' }}>Net avant impôt</p>
-            <p className="text-2xl font-bold" style={{ color: '#0F172A' }}>{fmt(res.netAvantImpot)}</p>
+            <p className="metric-value text-2xl font-bold" style={{ color: '#0F172A' }}>{fmt(res.netAvantImpot)}</p>
             <p className="text-xs mt-1" style={{ color: '#94A3B8' }}>{pct(res.sal.total / res.brut)} de charges</p>
           </div>
-          <div className="rounded-2xl p-5" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
+          <div className="result-card rounded-2xl p-5" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
             <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: '#94A3B8' }}>Coût employeur</p>
-            <p className="text-2xl font-bold" style={{ color: '#0F172A' }}>{fmt(res.coutTotal)}</p>
+            <p className="metric-value text-2xl font-bold" style={{ color: '#0F172A' }}>{fmt(res.coutTotal)}</p>
             <p className="text-xs mt-1" style={{ color: '#94A3B8' }}>Annuel : {fmt(res.coutAnnuel)}</p>
           </div>
-          <div className="rounded-2xl p-5" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
+          <div className="result-card rounded-2xl p-5" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
             <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: '#94A3B8' }}>Taux horaire</p>
-            <p className="text-2xl font-bold" style={{ color: '#0F172A' }}>{res.salaireHoraire.toFixed(2)} €/h</p>
+            <p className="metric-value text-2xl font-bold" style={{ color: '#0F172A' }}>{res.salaireHoraire.toFixed(2)} €/h</p>
             <p className="text-xs mt-1" style={{ color: '#94A3B8' }}>{res.heuresMois.toFixed(1)} h/mois</p>
           </div>
         </div>

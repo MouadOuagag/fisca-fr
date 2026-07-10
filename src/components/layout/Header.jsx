@@ -35,7 +35,9 @@ export default function Header() {
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 1.5rem', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
           {/* Brand */}
-          <NavLink to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+          <NavLink to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', transition: 'opacity 0.15s' }}
+            onMouseEnter={e => e.currentTarget.style.opacity = '0.8'}
+            onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
             <div style={{ width: '34px', height: '34px', background: '#0B1F3A', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <TrendingUp size={16} color="white" />
             </div>
@@ -55,7 +57,7 @@ export default function Header() {
                 Nos outils <ChevronDown size={14} />
               </button>
               {toolsOpen && (
-                <div style={{ position: 'absolute', top: '100%', left: 0, background: 'white', border: '1px solid #E2E8F0', borderRadius: '16px', padding: '8px', width: '260px', boxShadow: '0 10px 40px rgba(0,0,0,0.1)', marginTop: '4px' }}>
+                <div className="dropdown-menu" style={{ position: 'absolute', top: '100%', left: 0, background: 'white', border: '1px solid #E2E8F0', borderRadius: '16px', padding: '8px', width: '260px', boxShadow: '0 10px 40px rgba(0,0,0,0.1)', marginTop: '4px' }}>
                   {tools.map(({ to, label, desc }) => (
                     <NavLink key={to} to={to}
                       style={{ display: 'flex', flexDirection: 'column', padding: '10px 12px', borderRadius: '10px', textDecoration: 'none', transition: 'background 0.1s' }}
@@ -69,12 +71,12 @@ export default function Header() {
               )}
             </div>
 
-            <NavLink to="/blog"
+            <NavLink to="/blog" className="nav-link"
               style={{ padding: '8px 14px', borderRadius: '10px', fontSize: '14px', fontWeight: 600, color: '#475569', textDecoration: 'none' }}>
               Blog
             </NavLink>
 
-            <NavLink to="/a-propos"
+            <NavLink to="/a-propos" className="nav-link"
               style={{ padding: '8px 14px', borderRadius: '10px', fontSize: '14px', fontWeight: 600, color: '#475569', textDecoration: 'none' }}>
               À propos
             </NavLink>
