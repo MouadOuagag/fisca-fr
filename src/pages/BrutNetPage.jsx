@@ -152,7 +152,7 @@ export default function BrutNetPage() {
               <div>
                 <label htmlFor="input-mensuel" style={LABEL}>
                   Mensuel brut
-                  <span style={{ marginLeft: '8px', padding: '2px 7px', borderRadius: '6px', background: '#EFF6FF', color: '#1E5FCC', fontSize: '10px', fontWeight: 700 }}>
+                  <span style={{ marginLeft: '8px', padding: '2px 7px', borderRadius: '6px', background: '#DBEAFE', color: '#1D4ED8', fontSize: '10px', fontWeight: 700 }}>
                     {STATUTS.find(s => s.id === statut)?.sub}
                   </span>
                 </label>
@@ -182,7 +182,7 @@ export default function BrutNetPage() {
                   aria-label="Glissière salaire mensuel brut"
                   style={{ width: '100%', marginTop: '8px', accentColor: '#1E5FCC' }}
                 />
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#CBD5E1', marginTop: '2px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#64748B', marginTop: '2px' }}>
                   <span>1 000 €</span><span>20 000 €</span>
                 </div>
               </div>
@@ -284,7 +284,7 @@ export default function BrutNetPage() {
                 aria-valuenow={tempsTravail}
                 style={{ width: '100%', accentColor: '#1E5FCC' }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#CBD5E1', marginTop: '2px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#64748B', marginTop: '2px' }}>
                 <span>10%</span><span>50%</span><span>80%</span><span>100%</span>
               </div>
             </div>
@@ -341,7 +341,7 @@ export default function BrutNetPage() {
                 aria-valuenow={tauxPAS}
                 style={{ width: '100%', accentColor: '#1E5FCC' }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#CBD5E1', marginTop: '2px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#64748B', marginTop: '2px' }}>
                 <span>0 % (neutre)</span><span>43 % (max)</span>
               </div>
             </div>

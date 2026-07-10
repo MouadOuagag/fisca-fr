@@ -51,7 +51,7 @@ export default function EditorialIntro({
       {/* Source note */}
       {sourceNote && (
         <p className="text-xs leading-relaxed pt-3 border-t"
-          style={{ color: '#94A3B8', borderColor: '#F1F5F9' }}>
+          style={{ color: '#64748B', borderColor: '#F1F5F9' }}>
           📋 {sourceNote}
         </p>
       )}

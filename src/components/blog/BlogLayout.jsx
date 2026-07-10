@@ -41,13 +41,13 @@ export default function BlogLayout({
           )}
           {date && (
             <span className="flex items-center gap-1 text-xs"
-              style={{ color: '#94A3B8' }}>
+              style={{ color: '#64748B' }}>
               <Calendar size={11} /> {date}
             </span>
           )}
           {readTime && (
             <span className="flex items-center gap-1 text-xs"
-              style={{ color: '#94A3B8' }}>
+              style={{ color: '#64748B' }}>
               <Clock size={11} /> {readTime} de lecture
             </span>
           )}
@@ -87,7 +87,7 @@ export default function BlogLayout({
               </div>
             )}
             {editorialIntro.source && (
-              <p className="text-xs mt-3 pt-3 border-t" style={{ color: '#94A3B8', borderColor: '#F1F5F9' }}>
+              <p className="text-xs mt-3 pt-3 border-t" style={{ color: '#64748B', borderColor: '#F1F5F9' }}>
                 Source : {editorialIntro.source}
               </p>
             )}
