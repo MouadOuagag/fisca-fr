@@ -93,6 +93,7 @@ export default function Footer() {
               style={{ color: 'rgba(255,255,255,0.3)' }}>Légal</p>
             <div className="space-y-2">
               {[
+                { to: '/a-propos',                  label: 'À propos' },
                 { to: '/mentions-legales',          label: 'Mentions Légales' },
                 { to: '/politique-confidentialite', label: 'Confidentialité' },
                 { to: '/cgu',                       label: 'CGU' },

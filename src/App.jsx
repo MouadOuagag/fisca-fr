@@ -12,6 +12,7 @@ import ArticlePage from './pages/blog/ArticlePage'
 import MentionsLegales from './pages/legal/MentionsLegales'
 import Confidentialite from './pages/legal/Confidentialite'
 import CGU from './pages/legal/CGU'
+import AProposPage from './pages/AProposPage'
 
 function LayoutRoutes() {
   return (
@@ -28,6 +29,7 @@ function LayoutRoutes() {
         <Route path="/mentions-legales"          element={<MentionsLegales />} />
         <Route path="/politique-confidentialite" element={<Confidentialite />} />
         <Route path="/cgu"                       element={<CGU />} />
+        <Route path="/a-propos"                  element={<AProposPage />} />
       </Routes>
     </Layout>
   )

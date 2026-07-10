@@ -167,6 +167,34 @@ export default function HomePage() {
         ))}
       </div>
 
+      {/* Section éditoriale — pourquoi nous choisir */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        {[
+          {
+            icon: '📊',
+            title: 'Calculs officiels 2026',
+            desc: 'Tous nos taux sont basés sur les textes officiels URSSAF, DGFiP et Légifrance. Mis à jour à chaque changement de législation.'
+          },
+          {
+            icon: '⚡',
+            title: 'Résultats instantanés',
+            desc: 'Pas besoin de cliquer sur "Calculer". Les résultats s\'affichent en temps réel pendant que vous saisissez vos données.'
+          },
+          {
+            icon: '🔒',
+            title: '100% privé & gratuit',
+            desc: 'Aucune donnée n\'est envoyée à nos serveurs. Tous les calculs s\'effectuent dans votre navigateur. Aucune inscription requise.'
+          },
+        ].map(({ icon, title, desc }) => (
+          <div key={title} className="rounded-2xl p-5"
+            style={{ background: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)' }}>
+            <div className="text-2xl mb-3">{icon}</div>
+            <h3 className="font-bold text-sm mb-2" style={{ color: '#0F172A' }}>{title}</h3>
+            <p className="text-xs leading-relaxed" style={{ color: '#64748B' }}>{desc}</p>
+          </div>
+        ))}
+      </div>
+
       {/* SEO content */}
       <section className="rounded-2xl p-6 sm:p-8" style={{ background: 'white', boxShadow: CARD_SHADOW }}>
         <h2 className="text-xl font-bold mb-3" style={{ color: '#0F172A' }}>
